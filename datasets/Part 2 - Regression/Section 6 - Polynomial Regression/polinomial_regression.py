@@ -15,11 +15,11 @@ import pandas as pd
 
 # Importar el data set
 dataset = pd.read_csv('Position_Salaries.csv')
-X = dataset.iloc[:, 1:2].values
+X = dataset.iloc[:, 1:2].values # DFM 1:2 se usa para decirle que es un vector, no una matriz.
 y = dataset.iloc[:, 2].values
 
 
-# Dividir el data set en conjunto de entrenamiento y conjunto de testing
+# Dividir el data set en conjunto de entrenamiento y conjunto de testing --> no lo hago porque tenemos pocos datos
 """
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)

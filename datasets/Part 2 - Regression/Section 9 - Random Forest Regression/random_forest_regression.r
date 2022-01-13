@@ -21,7 +21,7 @@ dataset = dataset[, 2:3]
 # install.packages("randomForest")
 library(randomForest)
 set.seed(1234)
-regression = randomForest(x = dataset[1],
+regression = randomForest(x = dataset[1], # DFM pide un data frame
                           y = dataset$Salary,
                           ntree = 500)
 
