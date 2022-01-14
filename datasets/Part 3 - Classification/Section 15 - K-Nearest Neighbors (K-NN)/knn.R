@@ -18,6 +18,9 @@ testing_set[,1:2] = scale(testing_set[,1:2])
 
 # Ajustar el clasificador con el conjunto de entrenamiento 
 # y hacer las predicciones con el conjunto de testing.
+
+# DFM esto ya hace todo de una vez
+
 library(class)
 y_pred = knn(train = training_set[,-3],
              test = testing_set[,-3],

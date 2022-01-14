@@ -23,7 +23,7 @@ classifier = glm(formula = Purchased ~ .,
 
 # Predicción de los resultados con el conjunto de testing
 prob_pred = predict(classifier, type = "response",
-                    newdata = testing_set[,-3])
+                    newdata = testing_set[,-3]) # DFM excluye la columna 3
 
 y_pred = ifelse(prob_pred> 0.5, 1, 0)
 
