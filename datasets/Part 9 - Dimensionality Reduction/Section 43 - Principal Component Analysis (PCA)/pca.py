@@ -33,7 +33,7 @@ X_test = sc_X.transform(X_test)
 
 # Reducir la dimensión del dataset con ACP
 from sklearn.decomposition import PCA
-pca = PCA(n_components = 2)
+pca = PCA(n_components = 2) # DFM se prueba primero con None para ver qué variables explican más la varianza
 X_train = pca.fit_transform(X_train)
 X_test = pca.transform(X_test)
 explained_variance = pca.explained_variance_ratio_
